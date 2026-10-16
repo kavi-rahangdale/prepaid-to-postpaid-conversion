@@ -1,0 +1,38 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python generated files
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Secrets (कभी commit मत करना!)
+.env
+*.pem
+.aws/
+
+# Data और models (बड़ी files, Git के लिए नहीं)
+data/raw/*
+data/interim/*
+data/processed/*
+models/*
+!**/.gitkeep
+
+# Experiment tracking
+mlruns/
+mlartifacts/
+
+# Notebooks के checkpoints
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
