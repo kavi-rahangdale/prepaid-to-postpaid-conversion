@@ -27,6 +27,9 @@ mlartifacts/
 # Notebooks के checkpoints
 .ipynb_checkpoints/
 
+# Generated reports
+reports/*.json
+
 # Logs
 *.log
 logs/

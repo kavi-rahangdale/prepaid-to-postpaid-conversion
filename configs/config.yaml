@@ -26,3 +26,47 @@ business:
 modeling:
   test_size: 0.2
   top_k_fraction: 0.10
+
+validation:
+  target_column: converted_60d
+  id_column: customer_id
+  max_missing_fraction: 0.05
+  expected_columns:
+    - customer_id
+    - snapshot_date
+    - age
+    - gender
+    - city_tier
+    - handset_type
+    - tenure_months
+    - arpu_90d_avg
+    - recharge_count_90d
+    - avg_recharge_amount
+    - days_since_last_recharge
+    - data_usage_gb_90d
+    - voice_minutes_90d
+    - sms_count_90d
+    - roaming_days_90d
+    - app_logins_30d
+    - complaints_90d
+    - postpaid_inquiry_calls_90d
+    - welcome_kit_sent
+    - converted_60d
+  ranges:            # [min, max] allowed values
+    age: [18, 80]
+    tenure_months: [0, 600]
+    arpu_90d_avg: [0, 3000]
+    recharge_count_90d: [0, 60]
+    avg_recharge_amount: [0, 3000]
+    days_since_last_recharge: [0, 365]
+    data_usage_gb_90d: [0, 500]
+    voice_minutes_90d: [0, 10000]
+    sms_count_90d: [0, 500]
+    roaming_days_90d: [0, 90]
+    app_logins_30d: [0, 200]
+    complaints_90d: [0, 50]
+    postpaid_inquiry_calls_90d: [0, 50]
+  allowed_values:
+    gender: [Male, Female, Other]
+    handset_type: [Budget, Mid, Premium]
+    city_tier: [1, 2, 3]
