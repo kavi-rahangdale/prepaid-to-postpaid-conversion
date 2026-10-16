@@ -1,0 +1,28 @@
+project:
+  name: prepaid-to-postpaid-conversion
+  random_seed: 42
+
+paths:
+  raw_data: data/raw/customers.csv
+  interim_dir: data/interim
+  processed_dir: data/processed
+  models_dir: models
+  reports_dir: reports
+
+data_generation:
+  n_customers: 50000
+  positive_rate: 0.03
+  missing_rate: 0.05
+  outlier_rate: 0.01
+
+target:
+  feature_window_days: 90
+  label_window_days: 60
+
+business:
+  cost_per_contact: 60
+  value_per_conversion: 2000
+
+modeling:
+  test_size: 0.2
+  top_k_fraction: 0.10
